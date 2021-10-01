@@ -4,6 +4,7 @@ import path from 'path'
 import exphbs from 'express-handlebars'
 import MongoDB from './server/database/mongoDB.js'
 import startServer from './server/server.js'
+import pageRouter from './server/route/page/pageRouter.js'
 
 config()
 
@@ -25,8 +26,6 @@ app.engine('handlebars', exphbs({
 app.set('view engine', 'handlebars')
 app.set('views', `${__dirname}/web/server/views`)
 
-app.get('/', (_, res) => {
-  res.render('index')
-})
+app.use(pageRouter)
 
 startServer(app, port, db)
