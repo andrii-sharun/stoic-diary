@@ -1,0 +1,15 @@
+{
+  "name": "stoic-diary",
+  "version": "1.0.0",
+  "description": "Stoic Diary",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "stoic",
+    "diary"
+  ],
+  "author": "Andrii Sharun",
+  "license": "ISC"
+}
