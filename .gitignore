@@ -1,3 +1,5 @@
 /node_modules
+/coverage
+/web/client/public
 package-lock.json
 .env
