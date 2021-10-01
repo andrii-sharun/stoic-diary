@@ -1,10 +1,13 @@
 import express from 'express'
 import { config } from 'dotenv'
+import path from 'path'
+import exphbs from 'express-handlebars'
 import MongoDB from './server/database/mongoDB.js'
 import startServer from './server/server.js'
 
 config()
 
+const __dirname = path.resolve()
 const port = process.env.PORT
 const dbConfig = {
   dbName: process.env.DB_NAME,
@@ -16,8 +19,14 @@ const db = new MongoDB(dbConfig)
 
 const app = express()
 
+app.engine('handlebars', exphbs({
+  defaultLayout: false
+}))
+app.set('view engine', 'handlebars')
+app.set('views', `${__dirname}/web/server/views`)
+
 app.get('/', (_, res) => {
-  res.send('Server working')
+  res.render('index')
 })
 
 startServer(app, port, db)
