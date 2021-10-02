@@ -5,7 +5,8 @@ const __dirname = path.resolve()
 const mode = 'development'
 const entry = {
   app: `${__dirname}/web/client/src/page/app.tsx`,
-  homepage: `${__dirname}/web/client/src/page/homepage.tsx`
+  homepage: `${__dirname}/web/client/src/page/homepage.tsx`,
+  login: `${__dirname}/web/client/src/page/login.tsx`
 }
 
 export default {
