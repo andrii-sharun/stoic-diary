@@ -32,6 +32,18 @@ describe('pageRouter', () => {
     })
 
     it('should return html page', async () => {
+      const response = await router.get('/login')
+      expect(response.header).toHaveProperty('content-type', 'text/html; charset=utf-8')
+    })
+  })
+
+  describe('"/login" route', () => {
+    it('should return statusCode 200', async () => {
+      const response = await router.get('/app')
+      expect(response.statusCode).toBe(200)
+    })
+
+    it('should return html page', async () => {
       const response = await router.get('/')
       expect(response.header).toHaveProperty('content-type', 'text/html; charset=utf-8')
     })
