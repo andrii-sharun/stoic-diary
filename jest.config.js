@@ -1,4 +1,5 @@
 export default {
+  verbose: true,
   automock: false,
   bail: 5,
   clearMocks: true,
