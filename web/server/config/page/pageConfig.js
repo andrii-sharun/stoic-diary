@@ -1,4 +1,8 @@
 const pagesConfig = {
+  homepage: {
+    title: 'Stoic Diary | Homepage',
+    bundle: 'homepage'
+  },
   app: {
     title: 'Stoic Diary | App',
     bundle: 'app'
