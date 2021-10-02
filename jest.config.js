@@ -4,5 +4,6 @@ export default {
   clearMocks: true,
   collectCoverage: true,
   coverageProvider: 'babel',
-  coverageReporters: ['lcov']
+  coverageReporters: ['lcov'],
+  moduleFileExtensions: ["js", "json", "ts", "tsx"]
 }
