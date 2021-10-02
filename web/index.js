@@ -26,6 +26,7 @@ app.engine('handlebars', exphbs({
 app.set('view engine', 'handlebars')
 app.set('views', `${__dirname}/web/server/views`)
 
+app.use(express.static(`${__dirname}/web/client/public`))
 app.use(pageRouter)
 
 startServer(app, port, db)
