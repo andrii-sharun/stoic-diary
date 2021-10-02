@@ -25,9 +25,9 @@ afterAll(() => {
 })
 
 describe('pageRouter', () => {
-  describe('"/" route', () => {
+  describe('"/app" route', () => {
     it('should return statusCode 200', async () => {
-      const response = await router.get('/')
+      const response = await router.get('/app')
       expect(response.statusCode).toBe(200)
     })
 

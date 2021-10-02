@@ -1,9 +1,8 @@
 import { Router } from 'express'
+import pageController from '../../controller/pageController.js'
 
 const router = new Router()
 
-router.get('/', (_, res) => {
-  res.render('index')
-})
+router.get('/app', pageController.renderPage('app'))
 
 export default router
