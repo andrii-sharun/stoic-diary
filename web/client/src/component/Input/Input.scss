@@ -3,3 +3,20 @@
   border: none;
   width: 100%;
 }
+
+.login__input {
+  @extend .input;
+  border-radius: 20px;
+  height: 40px;
+  background-color: #11405dcb;
+  padding-left: 10px;
+
+  &::placeholder {
+    color: #d6d1d1;
+  }
+
+  &:focus {
+    background-color: #f2f2f2;
+    box-shadow: 0px 0px 5px 2px #f2f2f2;
+  }
+}
