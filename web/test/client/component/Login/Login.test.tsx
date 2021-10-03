@@ -37,4 +37,9 @@ describe('Login', () => {
     userEvent.type(passwordInput, passwordValue)
     expect(passwordInput).toHaveValue(passwordValue)
   })
+
+  it('should render component with buttons', () => {
+    const buttons = screen.getAllByRole('button')
+    expect(buttons).toHaveLength(2)
+  })
 })

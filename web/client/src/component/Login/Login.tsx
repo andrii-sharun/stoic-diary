@@ -1,4 +1,5 @@
 import { FC, useState, ChangeEventHandler } from 'react'
+import Button from '../Button/Button'
 import Form from '../Form/Form'
 import Input from '../Input/Input'
 import './Login.scss'
@@ -16,6 +17,7 @@ const Login: FC = () => {
     setPasswordValue(e.target.value)
   }
 
+  const handleClickButton = () => { }
   return (
     <div className='login'>
       <LoginHeading text='Stoic Diary' />
@@ -36,6 +38,22 @@ const Login: FC = () => {
             plaсeholder='Enter your password'
             value={passwordlValue}
             onChange={handleChangePassword}
+          />
+        </div>
+        <div className="login__buttons">
+          <Button
+            className='login__button'
+            name='login'
+            type='submit'
+            text='Sign in'
+            onClick={handleClickButton}
+          />
+          <Button
+            className='login__button'
+            name='registration'
+            type='submit'
+            text='Sign up'
+            onClick={handleClickButton}
           />
         </div>
       </Form>

@@ -3,3 +3,25 @@
   outline: none;
   border-radius: 20px;
 }
+
+.login__button {
+  @extend .button;
+  width: 45%;
+  height: 40px;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+  }
+
+  &[name='login'] {
+    background-color: #0a9396;
+  }
+
+  &[name='registration'] {
+    background-color: #c21d67;
+  }
+}
