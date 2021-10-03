@@ -2,10 +2,12 @@ import { render, screen } from '@testing-library/react'
 import Login from '../../../../client/src/component/Login/Login'
 
 describe('Login', () => {
-  it('should render component', () => {
+  beforeEach(() => {
     render(<Login />)
-    const text = screen.getByText('Login')
+  })
 
-    expect(text).toBeInTheDocument()
+  it('should render component with heading', () => {
+    const heading = screen.getByRole('heading', { name: 'Stoic Diary' })
+    expect(heading).toBeInTheDocument()
   })
 })
