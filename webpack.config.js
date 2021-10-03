@@ -25,6 +25,10 @@ export default {
       {
         test: /\.s[ac]ss$/,
         use: ['style-loader', 'css-loader', 'sass-loader']
+      },
+      {
+        test: /\.svg/,
+        type: 'asset/inline'
       }
     ]
   },
