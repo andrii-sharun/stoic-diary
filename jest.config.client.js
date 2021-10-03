@@ -8,7 +8,8 @@ export default {
     "^.+\\.tsx?$": "ts-jest"
   },
   moduleNameMapper: {
-    "\\.scss$": '<rootDir>/web/test/mocks/emptyObject.js'
+    "\\.scss$": '<rootDir>/web/test/mocks/emptyObject.js',
+    '^@components/(.*)$': '<rootDir>/web/client/src/component/$1'
   },
   displayName: {
     name: 'Client',
