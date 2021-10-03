@@ -7,6 +7,9 @@ export default {
   transform: {
     "^.+\\.tsx?$": "ts-jest"
   },
+  moduleNameMapper: {
+    "\\.scss$": '<rootDir>/web/test/mocks/emptyObject.js'
+  },
   displayName: {
     name: 'Client',
     color: 'yellow',
